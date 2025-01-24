@@ -23,7 +23,7 @@ flowchart TD
     UIFrameworkSharing -->|no| KotlinMultiplatform["Kotlin Multiplatform"]
     
     NativeAPIUsage -->|yes| CodebaseSharing
-    NativeAPIUsage -->|no| LibraryReliance["I do not want to rely on community maintained libraries"]
+    NativeAPIUsage -->|no| LibraryReliance["I am opposed to rely on community-maintained libraries"]
     
     LibraryReliance -->|yes| CodebaseSharing
     LibraryReliance -->|no| OSAPIImplementation["I want to implement new operating system APIs as quickly as possible"]
