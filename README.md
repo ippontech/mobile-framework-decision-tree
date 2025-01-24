@@ -49,7 +49,7 @@ flowchart TD
     TechnicalStackMaintenance -->|yes| CodebaseSharing
     TechnicalStackMaintenance -->|no| CrossPlatformDependencies
     
-    CrossPlatformDependencies -->|yes| DesignCriticality["Pixel perfect design is critical for my application"]
+    CrossPlatformDependencies -->|yes| DesignCriticality["I want a dedicated UI engine that garantees a UI consistency across the targeted OS"]
     CrossPlatformDependencies -->|no| NativeLibrarySkills["I have skills to develop my own native libraries"]
     
     NativeLibrarySkills -->|no| LibraryCriticality["The aforementioned libraries are critical for my application"]
