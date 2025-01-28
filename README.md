@@ -3,6 +3,11 @@
 ## Decision flowchart
 
 ```mermaid
+---
+config:
+  theme: neutral
+  look: classic
+---
 flowchart TD
     TargetOS["I target only one operating system"] -->|yes| Native["Native"]
     TargetOS -->|no| LimitedBudget["I have a very limited budget"]
@@ -78,6 +83,23 @@ flowchart TD
     
     WebEcosystemPreference -->|yes| ReactNative
     WebEcosystemPreference -->|no| Flutter
+
+    TargetOS@{ shape: circle}
+    Native@{ shape: terminal}
+    Flutter@{ shape: terminal}
+    ReactNative@{ shape: terminal}
+    KotlinMultiplatform@{ shape: terminal}
+    ComposeMultiplatform@{ shape: terminal}
+
+    TargetOS:::StartStep
+    Native:::FinalStep
+    Flutter:::FinalStep
+    ReactNative:::FinalStep
+    KotlinMultiplatform:::FinalStep
+    ComposeMultiplatform:::FinalStep
+
+    classDef StartStep stroke-width:2px, stroke-dasharray:none, stroke:#00C853, fill:#C8E6C9, color:#000000
+    classDef FinalStep stroke-width:4px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
 ```
 
 ## Explanation
