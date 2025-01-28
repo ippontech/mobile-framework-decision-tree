@@ -18,11 +18,12 @@ flowchart TD
     PerformanceTuning -->|yes| CodebaseSharing["I am willing to learn an additional framework and complexify my codebase to share my domain and data layer"]
     PerformanceTuning -->|no| NativeAPIUsage["My application will use many native APIs"]
     
-    CodebaseSharing -->|no| Native
     CodebaseSharing -->|yes| DeveloperSkills["Developers are willing to work with Kotlin and Android Studio"]
+    CodebaseSharing -->|no| Native
     
+    DeveloperSkills -->|yes| UIFrameworkSharing["I am ready to use an additional beta framework to share at least part of my user interface between the targeted
+operating systems"]
     DeveloperSkills -->|no| Native
-    DeveloperSkills -->|yes| UIFrameworkSharing["I am ready to use an additional beta framework to share at least part of my user interface between the targeted operating systems"]
     
     UIFrameworkSharing -->|yes| ComposeMultiplatform["Compose Multiplatform"]
     UIFrameworkSharing -->|no| KotlinMultiplatform["Kotlin Multiplatform"]
@@ -42,11 +43,11 @@ flowchart TD
     ListComplexity -->|yes| CodebaseSharing
     ListComplexity -->|no| UserExperienceOptimization["I want an operating system optimized user experience"]
     
-    UserExperienceOptimization -->|no| TerminalFleetManagement["I manage my terminal fleet"]
     UserExperienceOptimization -->|yes| CodebaseSharing
+    UserExperienceOptimization -->|no| TerminalFleetManagement["I manage my terminal fleet"]
     
-    TerminalFleetManagement -->|no| TechnicalStackMaintenance["I want to ensure my technical stack will be maintained for the longest possible time"]
     TerminalFleetManagement -->|yes| TerminalSDKDependency["I depend on native software development kit provided by my terminals manufacturers"]
+    TerminalFleetManagement -->|no| TechnicalStackMaintenance["I want to ensure my technical stack will be maintained for the longest possible time"]
     
     TerminalSDKDependency -->|yes| CodebaseSharing
     TerminalSDKDependency -->|no| TechnicalStackMaintenance
@@ -100,6 +101,9 @@ flowchart TD
 
     classDef StartStep stroke-width:2px, stroke-dasharray:none, stroke:#00C853, fill:#C8E6C9, color:#000000
     classDef FinalStep stroke-width:4px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
+
+    linkStyle 0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48 stroke:#00C853
+    linkStyle 1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49 stroke:#D50000
 ```
 
 ## Explanation
