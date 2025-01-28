@@ -58,10 +58,10 @@ flowchart TD
     LibraryCriticality -->|no| DesignCriticality
     
     DesignCriticality -->|yes| Flutter["Flutter"]
-    DesignCriticality -->|no| CompiledLanguagePreference["I absolutely want to work with a compiled programming language"]
+    DesignCriticality -->|no| LanguagePreference["I absolutely want to work with a statically typed language that enforces type soundness"]
     
-    CompiledLanguagePreference -->|yes| Flutter
-    CompiledLanguagePreference -->|no| EcosystemCapitalization["I absolutely want to capitalize on the Javascript and React ecosystem already present in my company"]
+    LanguagePreference -->|yes| Flutter
+    LanguagePreference -->|no| EcosystemCapitalization["I absolutely want to capitalize on the Javascript and React ecosystem already present in my company"]
     
     EcosystemCapitalization -->|yes| ReactNative["React Native"]
     EcosystemCapitalization -->|no| DependencyUpgradeAvoidance["I want to avoid investing time in upgrading dependency clusters"]
