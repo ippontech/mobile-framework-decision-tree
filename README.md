@@ -51,7 +51,8 @@ flowchart TD
     
     CrossPlatformDependencies -->|yes| DesignCriticality["I want a dedicated UI engine that garantees a UI consistency across the targeted OS"]
     CrossPlatformDependencies -->|no| NativeLibrarySkills["I have skills to develop my own native libraries"]
-    
+
+    NativeLibrarySkills -->|yes| DesignCriticality
     NativeLibrarySkills -->|no| LibraryCriticality["The aforementioned libraries are critical for my application"]
     
     LibraryCriticality -->|yes| CodebaseSharing
